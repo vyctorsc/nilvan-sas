@@ -1,0 +1,50 @@
+ <style>
+  .submenu {
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    width: 10rem;
+  }
+
+  .group:hover .submenu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<div class="flex justify-around items-center">
+  <img src="../../../assets/icon.png" alt="icon">
+  <ul class="flex gap-8 font-medium">
+    <li><a href="">Home</a></li>
+
+    <li class="group relative">
+      <a href="" class="group-hover:text-gray-300">Servicios <i class="fa-solid fa-chevron-down"></i></a>
+      <div class="absolute -left-1/2 bg-slate-100 p-1 font-normal rounded-lg shadow-lg submenu">
+        <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="#">Instalación de cctv</a></li>
+        <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Controles de Acceso</a></li>
+        <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Redes eléctricas</a></li>
+        <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Redes y telecomunicaciones</a></li>
+        <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Antenas antirrobo</a></li>
+        <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Alarmas ContraIncendios</a></li>
+      </div>
+    </li>
+
+    <li class="group relative">
+      <a href="" class="group-hover:text-gray-300">Empresa<i class="fa-solid fa-chevron-down"></i></a>
+      <div class="absolute -left-1/2 bg-slate-100 p-1 font-normal rounded-lg shadow-lg submenu">
+        <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Quienes Somos</a></li>
+        <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Mision y Vision</a></li>
+        <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Valores Corporativos</a></li>
+        <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Por que elegirnos</a></li>
+      </div>
+    </li>
+    <li><a href="">Contactar</a></li>
+  </ul>
+  <div class="flex gap-4 text-red-400 text-lg">
+    <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-facebook"></i>
+    <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-twitter"></i>
+    <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-whatsapp"></i>
+    <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-instagram"></i>
+    <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-linkedin"></i>
+  </div>
+</div>
