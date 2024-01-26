@@ -10,9 +10,17 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
 
   showService: boolean = false;
+  showMenu: boolean = false;
+  showSocial: boolean = false;
 
   showItemService(){
     this.showService = !this.showService
+  }
+  showMenuDevice(){
+    this.showMenu = !this.showMenu
+  }
+  showSocialNetwork(){
+    this.showSocial = !this.showSocial
   }
 
 }

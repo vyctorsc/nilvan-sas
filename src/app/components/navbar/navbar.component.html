@@ -12,9 +12,10 @@
   }
 </style>
 
-<div class="flex justify-around items-center">
+<div class="hidden md:flex justify-around items-center">
   <img class="w-10 h-9" src="../../../assets/icon.png" alt="icon">
   <ul class="flex gap-8 font-medium">
+
     <li><a href="">Inicio</a></li>
 
     <li class="group relative">
@@ -38,8 +39,11 @@
         <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Por que elegirnos</a></li>
       </div>
     </li>
+
     <li><a href="/contact">Contactar</a></li>
+
   </ul>
+
   <div class="flex gap-4 text-red-400 text-lg">
     <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-facebook"></i>
     <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-twitter"></i>
@@ -47,4 +51,65 @@
     <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-instagram"></i>
     <i class="hover:text-red-200 cursor-pointer text-xl fa-brands fa-linkedin"></i>
   </div>
+
+</div>
+
+
+<div class="flex md:hidden justify-around items-center py-1">
+
+  <div>
+    <i
+    (click)="showMenuDevice()"
+    class="fa-solid fa-bars text-2xl relative"
+    ></i>
+    @if (showMenu) {
+    <ul class="font-medium pl-6 text-white absolute bg-slate-800 bg-opacity-90 top-[5%] left-0 w-full h-screen">
+
+      <li class="py-2"><a href="">Inicio</a></li>
+
+      <li class="py-2 group">
+        <a href="/services" class="group-hover:text-gray-300">Servicios</a>
+        <div class=" p-1 font-normal rounded-lg shadow-lg">
+          <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="#">Instalación de cctv</a></li>
+          <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Controles de Acceso</a></li>
+          <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Redes eléctricas</a></li>
+          <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Redes y telecomunicaciones</a></li>
+          <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Antenas antirrobo</a></li>
+          <li class="pl-1 my-3 rounded-lg hover:bg-slate-200"><a href="">Alarmas ContraIncendios</a></li>
+        </div>
+      </li>
+
+      <li class="group">
+        <a href="/empresa" class="group-hover:text-gray-300">Empresa</a>
+        <div class="p-1 font-normal rounded-lg shadow-lg">
+          <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Quienes Somos</a></li>
+          <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Mision y Vision</a></li>
+          <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Valores Corporativos</a></li>
+          <li class="pl-1 hover:bg-slate-200 my-3 rounded-lg"><a href="">Por que elegirnos</a></li>
+        </div>
+      </li>
+
+      <li><a href="/contact">Contactar</a></li>
+
+    </ul>
+  }
+  </div>
+
+  <img class="w-10 h-9" src="../../../assets/icon.png" alt="icon">
+
+  <div class="">
+    <p class="text-sm">Redes Sociales <i (click)="showSocialNetwork()" class="fa-solid fa-chevron-down text-xs"></i></p>
+    <div class="absolute">
+    @if (showSocial) {
+    <div class="flex gap-3 top-2 -left-4 text-red-400 text-lg relative">
+      <a href="http://"><i class="hover:text-red-200 text-xl fa-brands fa-facebook"></i></a>
+      <a href="http://"><i class="hover:text-red-200 text-xl fa-brands fa-twitter"></i></a>
+      <a href="http://"><i class="hover:text-red-200 text-xl fa-brands fa-whatsapp"></i></a>
+      <a href="http://"><i class="hover:text-red-200 text-xl fa-brands fa-instagram"></i></a>
+      <a href="http://"><i class="hover:text-red-200 text-xl fa-brands fa-linkedin"></i></a>
+    </div>
+  }
+</div>
+  </div>
+
 </div>
